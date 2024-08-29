@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="Sidebar.css">
+    <style>
+        .attendance-container {
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #dddddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .attendance-actions {
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .name:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Abishek S</h2>
+            </div>
+            <ul>
+                <li><a href="Faculty.html">Profile</a></li>
+                <li><a href="classroom.html">Classroom</a></li>
+                <li><a href="studentlist.html">Attendance</a></li>
+                <li><a href="AddStudent.html">Add / Edit</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="attendance-container">
+        <h2>Attendance Marking System</h2>
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <th>Register No : </th>
+                    <th>Student Name</th>
+                    <th>Attendance</th>
+                </tr>
+                <tr>
+                    <td>311521104001</td>
+                    <td class="name" onclick="window.location.href='StudentsAttendance.html?sId=4038'">Isha U</td>
+                    <td>
+                        <input type="radio" name="attendance[101]" value="Present" required> Present
+                        <input type="radio" name="attendance[101]" value="Absent"> Absent
+                        <input type="radio" name="attendance[101]" value="OD"> On Duty
+                    </td>
+                </tr>
+                <tr>
+                    <td>311521104002</td>
+                    <td class="name" onclick="window.location.href='StudentsAttendance.html?sId=4033'">Preethaa R</td>
+                    <td>
+                        <input type="radio" name="attendance[102]" value="Present" required> Present
+                        <input type="radio" name="attendance[102]" value="Absent"> Absent
+                        <input type="radio" name="attendance[102]" value="OD"> On Duty
+                    </td>
+                </tr>
+                <tr>
+                    <td>311521104003</td>
+                    <td class="name" onclick="window.location.href='StudentsAttendance.html?sId=4033'">Reeta C</td>
+                    <td>
+                        <input type="radio" name="attendance[103]" value="Present" required> Present
+                        <input type="radio" name="attendance[103]" value="Absent"> Absent
+                        <input type="radio" name="attendance[103]" value="OD"> On Duty
+                    </td>
+                </tr>
+                
+                <!-- Add more rows as needed -->
+            </table>
+            <div class="attendance-actions">
+                <button type="submit" onclick=fun()>Submit Attendance</button>
+            </div>
+        </form>
+    </div>
+<script>
+    function fun(){
+alert("Data Added Successfully");
+}
+</script>
+</body>
+</html>

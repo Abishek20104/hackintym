@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="Studentcss.css">
+</head>
+<body>
+
+    <div id="leaveform" class="overlay-container">
+        <div class="popup-box">
+            <h2 id="title1" style="color:#007bff">Leave Form</h2>
+
+            <form class="form-container" action="leaveform.php" method="post">
+                <label class="form-label" for="fromdate">From</label>
+                    <input class="form-input" type="date" id="fromdate" name="fromdate" required>
+                <label class="form-label" for="fromdate">To</label>
+                    <input class="form-input" type="date" id="todate" name="todate" required>
+                <label class="form-label" for="Contact">Contact</label>
+                    <input class="form-input" type="text" id="contact" name="contact" required>
+                <label class="form-label" for="reason">Reason</label>
+                    <textarea class="form-label" name="reason" id="reason" rows="4" cols="50"></textarea>
+                <button class="btn-submit" type="submit">Submit</button>
+            </form>
+            <button class="btn-close-popup" onclick="leaveform()">Close</button>
+        </div>
+    </div>
+
+    <div id="odform" class="overlay-container">
+        <div class="popup-box">
+            <h2 id="title1" style="color:#007bff">On Duty Form</h2>
+                <form class="form-container" action="odform.php" method="post">
+                    <label class="form-label" for="fromdate">From</label>
+                    <input class="form-input" type="date" id="fromdate" name="fromdate" required>
+                <label class="form-label" for="fromdate">To</label>
+                    <input class="form-input" type="date" id="todate" name="todate" required>
+                <label class="form-label" for="Contact">Contact</label>
+                    <input class="form-input" type="text" id="contact" name="contact" required>
+                <label class="form-label" for="reason">Reason</label>
+                    <textarea class="form-label" name="reason" id="reason" rows="4" cols="50"></textarea>
+                    <button class="btn-submit" type="submit">Submit</button>
+                </form>
+            <button class="btn-close-popup" onclick="odform()">Close</button>
+        </div>
+    </div>
+
+    <div id="gatepassform" 
+         class="overlay-container">
+        <div class="popup-box">
+            <h2 id="title1" style="color:#007bff">Gatepass Form</h2>
+            <form class="form-container" action="gatepassform.php" method="post">
+                <label class="form-label" for="fromtime">From</label>
+                    <input class="form-input" type="time" id="fromtime" name="fromtime" required>
+                <label class="form-label" for="totime">To</label>
+                    <input class="form-input" type="time" id="totime" name="totime" required>
+                <label class="form-label" for="Contact">Contact</label>
+                    <input class="form-input" type="text" id="contact" name="contact" required>
+                <label class="form-label" for="reason">Reason</label>
+                    <textarea class="form-label" name="reason" id="reason" rows="4" cols="50"></textarea>
+                <button class="btn-submit" type="submit">Submit</button>
+            </form>
+            <button class="btn-close-popup" onclick="gatepassform()">Close</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Reeta A V</h2>
+            </div>
+            <ul>
+                <li><a href="Student.html">Profile</a></li>
+                <li><a href="classroomstudent.html">Classroom</a></li>
+                <li><a href="StudentsAttendance.html">Attendance</a></li>
+            </ul>
+        </div>
+            <div class="content">
+                <h1>Student Details</h1>
+                <div class="student-card">
+                    <h2>Reeta A V</h2>
+                    <p><strong>Department: </strong>Computer Science and Engineering</p>
+                    <p><strong>Year: </strong>IV</p>
+                    <p><strong>Register No: </strong>311521104038</p>
+                    <p><strong>Institution: </strong>Meenakshi Sundararajan Engineering College</p>
+                    <p><strong>Skills: </strong>Java, Python, Web Development, Data Structures</p>
+                    <p><strong>Interests: </strong>Artificial Intelligence, Machine Learning, Software Engineering</p>
+                </div>
+                <div class="apply">
+                    <button  onclick="leaveform()">Apply for Leave</button>
+                    <button  onclick="odform()">Apply for On Duty</button>
+                    <button  onclick="gatepassform()">Apply for Gatepass</button>
+                </div>
+                
+            </div>
+    </div>
+    <script>
+        function gatepassform() {2
+            document.getElementById('title1').innerHTML="Gatepass Form";
+            const overlay = document.getElementById('gatepassform');
+            overlay.classList.toggle('show');
+            
+        }
+        function leaveform() {
+            document.getElementById('title1').innerHTML="Leave Form";
+            const overlay = document.getElementById('leaveform');
+            overlay.classList.toggle('show');  
+        }
+        function odform() {
+            document.getElementById('title1').innerHTML="On Duty Form";
+            const overlay = document.getElementById('odform');
+            overlay.classList.toggle('show');
+        }
+
+        function convertDate() {
+    let dateInput = document.getElementById('todate').value;
+    console.log("hello");
+    let date = new Date(dateInput);
+    let dateString = date.toDateString(); 
+    console.log(dateString);
+}
+
+        
+
+    </script>
+</body>
+</html>

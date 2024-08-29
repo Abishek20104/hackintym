@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="Sidebar.css">
+    <style>
+        .dashboard-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 800px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        h2 {
+            margin: 0;
+            color: #333333;
+        }
+
+        .student-info {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .student-info div {
+            width: 48%;
+        }
+
+        .student-info p {
+            margin: 8px 0;
+            color: #555555;
+            font-size: 16px;
+        }
+
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .attendance-table, th, td {
+            border: 1px solid #dddddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        .present {
+            background-color: rgb(200, 230, 201);
+            color: rgb(56, 142, 60);
+        }
+
+        .absent {
+            background-color: rgb(255, 204, 209);
+            color: rgb(211, 47, 47);
+        }
+        .od{
+            background-color: rgb(255, 255, 200);
+            color: rgb(130, 130, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Reeta A V</h2>
+            </div>
+            <ul>
+                <li><a href="Student.html">Profile</a></li>
+                <li><a href="classroomstudent.html">Classroom</a></li>
+                <li><a href="StudentsAttendance.html">Attendance</a></li>
+
+            </ul>
+        </div>
+        <div class="dashboard-container">
+            <div class="header">
+                <h2>Student Attendance Dashboard</h2>
+            </div>
+            
+            <div class="student-info">
+                <div>
+                    <p><strong>Student Name:</strong> Reeta A V</p>
+                    <p><strong>Register Number:</strong> 311521104036</p>
+                </div>
+                <div>
+                    <p><strong>Course:</strong> Computer Science</p>
+                    <p><strong>Year:</strong> 4th Year</p>
+                </div>
+            </div>
+            
+            <table class="attendance-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>2024-08-01</td>
+                    <td class="present">Present</td>
+                </tr>
+                <tr>
+                    <td>2024-08-02</td>
+                    <td class="absent">Absent</td>
+                </tr>
+                <tr>
+                    <td>2024-08-03</td>
+                    <td class="od">On Duty</td>
+                </tr>
+                <tr>
+                    <td>2024-08-04</td>
+                    <td class="present">Present</td>
+                </tr>
+                <tr>
+                    <td>2024-08-05</td>
+                    <td class="absent">Absent</td>
+                </tr>
+                <!-- More rows can be added as needed -->
+            </table>
+        </div>
+    </div>
+</body>
+</html>

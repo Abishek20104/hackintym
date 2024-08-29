@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Stream - Chemistry</title>
+    <link rel="stylesheet" href="chemistry.css">
+</head>
+<body>
+
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <div class="nav-logo">
+            <img src="user.png" alt="Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item active">Classroom</a></li>
+            <li><a href="#" class="nav-item">Grade Calculator</a></li>
+            <li><a href="#" class="nav-item">Study Material</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="outlet-box">
+            <h1>Chemistry- Faculty Stream</h1>
+            <div class="class-info">
+                <h2>Class Information</h2>
+                <p><strong>Class Code:</strong> MTH101</p>
+                <p><strong>Instructor:</strong> Prof. John Doe</p>
+            </div>
+            <div class="stream-updates">
+                <h2>Stream Updates</h2>
+                <div class="update">
+                    <p><strong>Announcement:</strong> Homework 5 has been posted. Please check the assignments tab for details.</p>
+                    <p><small>Date: August 23, 2024</small></p>
+                </div>
+                <div class="update">
+                    <p><strong>Reminder:</strong> Quiz on Algebra is scheduled for next Friday. Prepare accordingly.</p>
+                    <p><small>Date: August 22, 2024</small></p>
+                </div>
+            </div>
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2>Upload Files and Documents</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="file-upload">Select files:</label>
+                    <input type="file" id="file-upload" name="files[]" multiple>
+                    <button type="submit" class="upload-btn">Upload Files</button>
+                </form>
+            </div>
+            <!-- Recent Uploads Section -->
+            <div class="recent-uploads">
+                <h2>Recent Uploads</h2>
+                <ul>
+                    <li><a href="https://example.com/assignment1.pdf" target="_blank">Assignment 1 - PDF</a></li>
+                    <li><a href="https://example.com/lecture_notes.docx" target="_blank">Lecture Notes - DOCX</a></li>
+                    <li><a href="https://example.com/homework1.zip" target="_blank">Homework 1 - ZIP</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

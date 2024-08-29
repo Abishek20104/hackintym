@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOD</title>
+    <link rel="stylesheet" href="Sidebar.css">
+    <link rel="stylesheet" href="HODcss.css">
+		<style>
+        .main {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chart-container {
+
+            width: 350px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .prediction-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Sairam J</h2>
+            </div>
+            <ul>
+                <li><a href="HOD.html">Profile</a></li>
+                <li><a href="display_requests.php">OD/Gatepass/Leave Request</a></li>
+                <li><a href="AddFaculty.html">Add / Edit</a></li>
+		<li><a href="dash.html">Attendance</a></li>
+		
+            </ul>
+        </div>
+        <div class="content">
+            <div class="main">
+
+<div class="chart-container">
+    <h2>AI-Driven Student Attendance</h2>
+    <canvas id="attendanceChart"></canvas>
+    <div class="prediction-container">
+        <h3>Predicted Attendance for Tomorrow:</h3>
+        <p id="prediction"></p>
+    </div>
+</div>
+
+<!-- Include Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Mock historical attendance data (e.g., last 7 days)
+    const historicalData = [
+        { present: 40, absent: 10, od: 5 },
+        { present: 42, absent: 8, od: 5 },
+        { present: 38, absent: 12, od: 5 },
+        { present: 39, absent: 11, od: 5 },
+        { present: 41, absent: 9, od: 5 },
+        { present: 43, absent: 7, od: 5 },
+        { present: 44, absent: 6, od: 5 },
+    ];
+
+    // AI model to predict attendance
+    function predictAttendance(data) {
+        const totalDays = data.length;
+        let presentSum = 0, absentSum = 0, odSum = 0;
+
+        data.forEach(day => {
+            presentSum += day.present;
+            absentSum += day.absent;
+            odSum += day.od;
+        });
+
+        const avgPresent = Math.round(presentSum / totalDays);
+        const avgAbsent = Math.round(absentSum / totalDays);
+        const avgOD = Math.round(odSum / totalDays);
+
+        return { present: avgPresent, absent: avgAbsent, od: avgOD };
+    }
+
+    // Current attendance data
+    const attendanceData = {
+        present: 40,
+        absent: 10,
+        od: 5
+    };
+
+    // Predict tomorrow's attendance
+    const prediction = predictAttendance(historicalData);
+
+    // Update prediction display
+    document.getElementById('prediction').textContent = `Present: ${prediction.present}, Absent: ${prediction.absent}, OD: ${prediction.od}`;
+
+    // Render the pie chart
+    const ctx = document.getElementById('attendanceChart').getContext('2d');
+    const attendanceChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Present', 'Absent', 'OD'],
+            datasets: [{
+                label: 'Attendance',
+                data: [attendanceData.present, attendanceData.absent, attendanceData.od],
+                backgroundColor: ['#28a745', '#dc3545', '#ffc107'],
+                borderColor: ['#28a745', '#dc3545', '#ffc107'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Current Attendance Overview'
+                }
+            }
+        }
+    });
+</script>
+</div>
+
+        </div>
+    </div>
+    
+
+</body>
+</html>

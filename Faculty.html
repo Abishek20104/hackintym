@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty</title>
+    <link rel="stylesheet" href="Facultycss.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="popupOverlay" 
+         class="overlay-container">
+        <div class="popup-box">
+            <h2 id="title" style="color:#007bff">Leave Form</h2>
+            <form class="form-container">
+                <label class="form-label" for="fromdate">From</label>
+                    <input class="form-input" type="date" id="fromdate" name="fromdate" required>
+                <label class="form-label" for="fromdate">To</label>
+                    <input class="form-input" type="date" id="todate" name="todate" required>
+                <label class="form-label" for="Contact">Contact</label>
+                    <input class="form-input" type="text" id="contact" name="contact" required>
+                <label class="form-label" for="reason">Reason</label>
+                    <textarea class="form-label" name="reason" id="reason" rows="4" cols="50"></textarea>
+                <button class="btn-submit" type="submit">Submit</button>
+            </form>
+
+            <button class="btn-close-popup" onclick="togglePopup1()">Close</button>
+        </div>
+    </div>
+
+    <div id="popup" 
+         class="overlay-container">
+        <div class="popup-box">
+            <h2 id="title" style="color:#007bff">Leave Form</h2>
+            <form class="form-container">
+                <label class="form-label" for="fromtime">From</label>
+                    <input class="form-input" type="time" id="fromtime" name="fromtime" required>
+                <label class="form-label" for="totime">To</label>
+                    <input class="form-input" type="time" id="totime" name="totime" required>
+                <label class="form-label" for="Contact">Contact</label>
+                    <input class="form-input" type="text" id="contact" name="contact" required>
+                <label class="form-label" for="reason">Reason</label>
+                    <textarea class="form-label" name="reason" id="reason" rows="4" cols="50"></textarea>
+                <button class="btn-submit" type="submit">Submit</button>
+            </form>
+            <button class="btn-close-popup" onclick="togglePopup3()">Close</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Abishek S</h2>
+            </div>
+            <ul>
+                <li><a href="Faculty.html">Profile</a></li>
+                <li><a href="classroom.html">Classroom</a></li>
+                <li><a href="studentlist.html">Attendance</a></li>
+                <li><a href="AddStudent.html">Add / Edit</a></li>
+            </ul>
+        </div>
+            <div class="content">
+                <h1>Faculty Details</h1>
+                <div class="student-card">
+                    <h2>Abishek S</h2>
+                    <p><strong>Department: </strong>Computer Science and Engineering</p>
+                    <p><strong>Faculty ID : </strong>31152</p>
+                    <p><strong>Institution: </strong>Meenakshi Sundararajan Engineering College</p>
+                    <p><strong>Designation: </strong>Associate Professor</p>
+                    <p><strong>Qualification: </strong>M.Sc Computer Science</p>
+                </div>
+                <div class="apply">
+                    <button  onclick="togglePopup1()">Apply for Leave</button>
+                    <button  onclick="togglePopup3()">Apply for Gatepass</button>
+                    <button  onclick="togglePopup2()">Apply for On Duty</button>
+                </div>
+                
+            </div>
+    </div>
+    <script>
+        function togglePopup1() {
+            const overlay = document.getElementById('popupOverlay');
+            overlay.classList.toggle('show');
+            document.getElementById('title').innerHTML="Leave Form";
+        }
+        function togglePopup2() {
+            const overlay = document.getElementById('popupOverlay');
+            overlay.classList.toggle('show');
+            document.getElementById('title').innerHTML="On Duty Form";
+
+        }
+        function togglePopup3() {
+            const overlay = document.getElementById('popup');
+            overlay.classList.toggle('show');
+            document.getElementById('title').innerHTML="Gatepass Form";
+        }
+    </script>
+</body>
+</html>

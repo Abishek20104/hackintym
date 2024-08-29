@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Faculty</title>
+    <link rel="stylesheet" href="Sidebar.css">
+    <link rel="stylesheet" href="AddorEdit.css">
+    <style>
+        .content{
+            width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Sairam J</h2>
+            </div>
+            <ul>
+                <li><a href="HOD.html">Profile</a></li>
+                <li><a href="display_requests.php">OD/Gatepass/Leave Request</a></li>
+                <li><a href="AddFaculty.html">Add / Edit</a></li>
+		<li><a href="dash.html">Attendance</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="form-wrapper">
+                <h2>Add / Edit Faculty Information</h2>
+                <form action="/add-faculty" method="POST">
+                    <div class="info-box">
+                        <div class="form-group">
+                            <label for="facultyId">Faculty ID:</label>
+                            <input type="text" id="facultyId" name="facultyId" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </div>
+        
+                    <div class="info-box">
+                        <div class="form-group">
+                            <label for="qualification">Qualification:</label>
+                            <input type="text" id="qualification" name="qualification" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="experience">Years of Experience:</label>
+                            <input type="number" id="experience" name="experience" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="department">Department:</label>
+                            <input type="text" id="department" name="department" required>
+                        </div>
+                    </div>
+        
+                    <div class="info-box">
+                        <div class="form-group">
+                            <label for="contact">Contact Number:</label>
+                            <input type="text" id="contact" name="contact" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+        
+                    <div class="info-box">
+                        <div class="form-group">
+                            <label for="specialization">Area of Specialization:</label>
+                            <input type="text" id="specialization" name="specialization" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="research">Research Interests:</label>
+                            <input type="text" id="research" name="research" required>
+                        </div>
+                    </div>
+        
+                    <div class="info-box">
+                        <div class="form-group">
+                            <label for="publications">Publications:</label>
+                            <textarea id="publications" name="publications" rows="4" cols="80" required></textarea>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="awards">Awards and Achievements:</label>
+                            <textarea id="awards" name="awards" rows="4" cols="80" required></textarea>
+                        </div>
+                    </div>
+        
+                    <div class="info-box">
+                        <div class="form-group">
+                            <label for="projects">Projects Guided:</label>
+                            <textarea id="projects" name="projects" rows="4" cols="80" required></textarea>
+                        </div>
+                    </div>
+        
+                    <button type="submit">Add/Update Faculty</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

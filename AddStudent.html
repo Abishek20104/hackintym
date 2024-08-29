@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Student</title>
+    <link rel="stylesheet" href="Sidebar.css">
+    <link rel="stylesheet" href="AddorEdit.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Abishek S</h2>
+            </div>
+            <ul>
+                <li><a href="Faculty.html">Profile</a></li>
+                <li><a href="classroom.html">Classroom</a></li>
+                <li><a href="studentlist.html">Attendance</a></li>
+                <li><a href="AddStudent.html">Add / Edit</a></li>
+            </ul>
+        </div>
+            <div class="content">
+                <div class="form-wrapper">
+                    <h2>Add / Edit Student Information</h2>
+                    <form action="addstu.php" method="POST">
+                        <div class="info-box">
+                            <div class="form-group">
+                                <label for="regNumber">Registration Number:</label>
+                                <input type="text" id="regNumber" name="regNumber" required>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="dob">Date of Birth:</label>
+                                <input type="date" id="dob" name="dob" required>
+                            </div>
+                        </div>
+            
+            
+                        <div>
+                            <label for="fatherName">Father's Name:</label>
+                            <input type="text" id="fatherName" name="fatherName" required>
+                        </div>
+                        <div>
+                            <label for="motherName">Mother's Name:</label>
+                            <input type="text" id="motherName" name="motherName" required>
+                        </div>
+                  
+            
+                        <div class="data-section">
+                            <div class="form-group">
+                                <label for="contact">Contact Number:</label>
+                                <input type="text" id="contact" name="contact" required>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+            
+                        <div class="entry-container">
+                            <div class="form-group">
+                                <label for="skills">Skills:</label>
+                                <input type="text" id="skills" name="skills" required>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="interests">Interests:</label>
+                                <input type="text" id="interests" name="interests" required>
+                            </div>
+                        </div>
+            
+                        <div class="data-section">
+                            <div class="form-group">
+                                <label for="marks">Marks (Semester 1 to 8):</label>
+                                <input type="number" id="sem1" name="marks.sem1" placeholder="Semester 1" required>
+                                <input type="number" id="sem2" name="marks.sem2" placeholder="Semester 2" required>
+                                <input type="number" id="sem3" name="marks.sem3" placeholder="Semester 3" required>
+                                <input type="number" id="sem4" name="marks.sem4" placeholder="Semester 4" required>
+                                <input type="number" id="sem5" name="marks.sem5" placeholder="Semester 5" required>
+                                <input type="number" id="sem6" name="marks.sem6" placeholder="Semester 6" required>
+                                <input type="number" id="sem7" name="marks.sem7" placeholder="Semester 7" required>
+                                <input type="number" id="sem8" name="marks.sem8" placeholder="Semester 8" required>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="cgpa">CGPA:</label>
+                                <input type="number" id="cgpa" name="cgpa" step="0.01" required>
+                            </div>
+                        </div>
+            
+                        <button type="submit">Add Student</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

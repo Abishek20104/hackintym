@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Stream - Data Science 101</title>
+    <link rel="stylesheet" href="math.css">
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            min-height: 100vh;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 250px; 
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            flex-grow: 1;
+        }
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: darkblue;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.profile h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+.content {
+    padding: 20px;
+}</style>
+</head>
+<body>
+
+    <div class="sidebar">
+            <div class="profile">
+                <img src="Img/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Sairam J</h2>
+            </div>
+            <ul>
+                <li><a href="Faculty.html">Profile</a></li>
+                <li><a href="classroom.html">Classroom</a></li>
+                <li><a href="studentlist.html">Attendance</a></li>
+                <li><a href="AddStudent.html">Add / Edit</a></li>
+            </ul>
+        </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="outlet-box">
+            <h1>Data Science - Faculty Stream</h1>
+            <div class="class-info">
+                <h2>Class Information</h2>
+                <p><strong>Class Code:</strong> DSC101</p>
+                <p><strong>Instructor:</strong> Prof. Sashong</p>
+            </div>
+            <div class="stream-updates">
+                <h2>Stream Updates</h2>
+                <div class="update">
+                    <p><strong>Announcement:</strong> Assignment 3 has been posted. Please check the assignments tab for details.</p>
+                    <p><small>Date: August 23, 2024</small></p>
+                </div>
+                <div class="update">
+                    <p><strong>Reminder:</strong> Data Visualization Quiz is scheduled for next Friday. Prepare accordingly.</p>
+                    <p><small>Date: August 22, 2024</small></p>
+                </div>
+            </div>
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2>Upload Files and Documents</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="file-upload">Select files:</label>
+                    <input type="file" id="file-upload" name="files[]" multiple>
+                    <button type="submit" class="upload-btn">Upload Files</button>
+                </form>
+            </div>
+            <!-- Recent Uploads Section -->
+            <div class="recent-uploads">
+                <h2>Recent Uploads</h2>
+                <ul>
+                    <li><a href="DSML.pdf" target="_blank">Data Science - PDF</a></li>
+                    <li><a href="https://example.com/lecture_notes.docx" target="_blank">Lecture Notes - DOCX</a></li>
+                    <li><a href="https://example.com/homework1.zip" target="_blank">Homework 1 - ZIP</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
